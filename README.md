@@ -209,4 +209,4 @@ lw-shared/
 
 ## License
 
-Copyright © 2026 Morgrhim. All rights reserved. See `LICENSE` for terms.
+Licensed under the [Rangeland Public License v1.0](LICENSE) — use it, modify it, don't sell it, don't ship it..
