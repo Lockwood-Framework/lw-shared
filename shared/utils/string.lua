@@ -70,3 +70,36 @@ function LWUtil.String.SnakeToTitle(s)
         return ' ' .. c:upper()
     end):gsub('^%a', string.upper))
 end
+
+--- Wraps a string into lines at word boundaries, never splitting mid-word.
+--- Used by lw-mortality and any memorial display resource to format epitaphs
+--- for fixed-width in-world surfaces.
+---@param  text        string
+---@param  lineLength  integer     Maximum characters per line
+---@param  maxLines    integer     Maximum number of lines to return
+---@return             string[]    Array of wrapped lines
+function LWUtil.String.WrapText(text, lineLength, maxLines)
+    if not text or text == '' then return {} end
+
+    local lines   = {}
+    local current = ''
+
+    for word in text:gmatch('%S+') do
+        if #lines >= maxLines then break end
+
+        if current == '' then
+            current = word
+        elseif #current + 1 + #word <= lineLength then
+            current = current .. ' ' .. word
+        else
+            lines[#lines + 1] = current
+            current = word
+        end
+    end
+
+    if current ~= '' and #lines < maxLines then
+        lines[#lines + 1] = current
+    end
+
+    return lines
+end
