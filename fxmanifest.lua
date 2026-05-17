@@ -10,30 +10,15 @@ version     '1.0.0'
 -- Enums first — utils may reference them. Math before utils in case utils ever
 -- needs a math helper internally. Assembly happens in client/server main.lua.
 shared_scripts {
-    'shared/enums/gender.lua',
-    'shared/enums/season.lua',
-    'shared/enums/weather.lua',
-    'shared/enums/health.lua',
-    'shared/enums/needs.lua',
-    'shared/enums/skills.lua',
-    'shared/enums/item.lua',
-    'shared/enums/organization.lua',
-    'shared/enums/crime.lua',
-    'shared/enums/clothing.lua',
-    'shared/enums/property.lua',
-    'shared/enums/object.lua',
-    'shared/enums/ui.lua',
-    'shared/math/numeric.lua',
-    'shared/math/vector.lua',
-    'shared/math/random.lua',
-    'shared/utils/table.lua',
-    'shared/utils/string.lua',
-    'shared/utils/json.lua',
+    'shared/enums/*.lua',
+    'shared/math/*.lua',
+    'shared/utils/*.lua',
 }
 
 client_scripts {
     'client/config.lua',
     'client/utils/cooldown.lua',
+    'client/utils/zones.lua',
     'client/main.lua',
 }
 
