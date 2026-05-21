@@ -131,6 +131,7 @@ LWEnum.District = {
     -- New Hanover
     Heartlands      = 0x07D4FF5F,
     roanoke         = 0x0AA5F25D,
+    Cumberland      = 0x6D67801E,
 
     -- Lemoyne
     BayouNwa        = 0x78BFE1AC,
@@ -139,7 +140,6 @@ LWEnum.District = {
 
     -- West Elizabeth
     bigvalley       = 0x3108C492,
-    Cumberland      = 0x6D67801E,
     greatPlains     = 0x1C68EA97,
     TallTrees       = 0x6467EF09,
 
