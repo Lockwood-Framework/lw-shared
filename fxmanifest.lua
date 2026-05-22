@@ -10,6 +10,7 @@ version     '1.0.0'
 -- Enums first — utils may reference them. Math before utils in case utils ever
 -- needs a math helper internally. Assembly happens in client/server main.lua.
 shared_scripts {
+    'shared/enums/zones.lua',
     'shared/enums/*.lua',
     'shared/math/*.lua',
     'shared/utils/*.lua',
